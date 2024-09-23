@@ -45,10 +45,10 @@
     </script>
   </head>
   <body>
-    <header>
-      <nav class="bg-secondary">
+    <header class="sticky top-0 backdrop-blur-md">
+      <nav class="bg-secondary backdrop-blur-md bg-opacity-80">
         <div
-          class="flex justify-around md:justify-between items-center md:w-10/12 mx-auto pt-4 md:pt-6 pb-8 md:pb-16"
+          class="flex justify-around md:justify-between items-center md:w-10/12 mx-auto pt-4 md:pt-6 pb-8 md:pb-12"
         >
           <div class="">
             <button
@@ -72,11 +72,13 @@
         </div>
       </nav>
 
-      <div class="flex justify-center items-center text-center gap-3 mt-20">
+      <div class="flex justify-center items-center text-center gap-3 mt-12">
         <button class="btn bg-primary">Donation</button>
         <button class="btn">History</button>
       </div>
+      <div class="divider"></div>
     </header>
+
     <main class="mt-8">
       <div class="w-10/12 mx-auto">
         <div
@@ -200,6 +202,8 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer class="mt-10">
+      <div class="bg-secondary h-20"></div>
+    </footer>
   </body>
 </html>
