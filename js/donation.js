@@ -71,7 +71,7 @@ document
 
       //history
       const historyItem = document.createElement("div");
-      historyItem.className = "p-8 rounded-md border-2 border-gray-500";
+      historyItem.className = "p-8 my-6 rounded-md border-2 border-gray-500";
       historyItem.innerHTML = `
          <p class="text-xl font-bold text-gray-500">${newQuotaDonation} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
          <p class="text-base font-light text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
@@ -91,6 +91,7 @@ historyTab.addEventListener("click", function () {
   historyTab.classList.add("bg-primary");
   donationTab.classList.remove("bg-primary");
   document.getElementById("donation-container").classList.add("hidden");
+  document.getElementById("history-container").classList.remove("hidden");
 });
 
 //donation tab functionality
@@ -98,4 +99,5 @@ donationTab.addEventListener("click", function () {
   donationTab.classList.add("bg-primary");
   historyTab.classList.remove("bg-primary");
   document.getElementById("donation-container").classList.remove("hidden");
+  document.getElementById("history-container").classList.add("hidden");
 });
