@@ -65,7 +65,10 @@
           </div>
           <div class="flex items-center gap-2 md:gap-4">
             <img src="./assets/coin.png" alt="" />
-            <h2 class="text-base md:text-lg lg:text-xl text-textColor1">
+            <h2
+              id="available-balance"
+              class="text-base md:text-lg lg:text-xl text-textColor1"
+            >
               5500 BDT
             </h2>
           </div>
@@ -76,21 +79,23 @@
         <button class="btn bg-primary">Donation</button>
         <button class="btn">History</button>
       </div>
-      <div class="divider"></div>
     </header>
 
     <main class="mt-8">
       <div class="w-10/12 mx-auto">
         <div
-          class="grid md:grid-cols-12 gap-8 p-8 border-2 border-opacity-10 rounded-xl"
+          class="grid md:grid-cols-12 gap-6 p-8 border-2 border-opacity-10 rounded-xl"
         >
-          <img src="./assets/noakhali.png" class="md:col-span-5" />
-          <div class="md:col-span-7">
+          <div class="md:col-span-6">
+            <img class="" src="./assets/noakhali.png" />
+          </div>
+          <div class="md:col-span-6">
             <div
-              class="flex justify-center items-center gap-2 bg-donatebg w-28 h-11 rounded-md"
+              id=""
+              class="flex justify-center items-center gap-2 bg-donatebg w-36 h-12 rounded-md"
             >
               <img src="./assets/coin.png" alt="" />
-              <p class="text-textColor1">0 BDT</p>
+              <p id="noakhali-total-collect" class="text-textColor1">0 BDT</p>
             </div>
             <div class="space-y-5 mt-4">
               <h1 class="text-xl font-bold">
@@ -107,11 +112,12 @@
               <input
                 type="number"
                 name=""
-                id=""
+                id="noakhali-donate-input"
                 placeholder="Write Donation Amount"
                 class="w-full border rounded border-opacity-10 p-3"
               />
               <button
+                id="donate-noakhali-btn"
                 class="py-3 px-8 rounded-md bg-primary w-full text-xl font-bold"
               >
                 Donate Now
@@ -122,13 +128,13 @@
         <div
           class="grid md:grid-cols-12 gap-8 p-8 border-2 border-opacity-10 rounded-xl mt-8"
         >
-          <img src="./assets/feni.png" class="md:col-span-5" />
-          <div class="md:col-span-7">
+          <img src="./assets/feni.png" class="md:col-span-6" />
+          <div class="md:col-span-6">
             <div
-              class="flex justify-center items-center gap-2 bg-donatebg w-28 h-10 rounded-md"
+              class="flex justify-center items-center gap-2 bg-donatebg w-36 h-12 rounded-md"
             >
               <img src="./assets/coin.png" alt="" />
-              <p class="text-textColor1">600 BDT</p>
+              <p id="feni-total-collect" class="text-textColor1">600 BDT</p>
             </div>
             <div class="space-y-6 mt-4">
               <h1 class="text-xl font-bold">
@@ -147,11 +153,12 @@
               <input
                 type="number"
                 name=""
-                id=""
+                id="feni-donate-input"
                 placeholder="Write Donation Amount"
                 class="w-full border rounded border-opacity-10 p-3"
               />
               <button
+                id="donate-feni-btn"
                 class="py-3 px-8 rounded-md bg-primary w-full text-xl font-bold"
               >
                 Donate Now
@@ -162,13 +169,13 @@
         <div
           class="grid md:grid-cols-12 gap-8 p-8 border-2 border-opacity-10 rounded-xl mt-8"
         >
-          <img src="./assets/quota-protest.png" class="md:col-span-5" />
-          <div class="md:col-span-7">
+          <img src="./assets/quota-protest.png" class="md:col-span-6" />
+          <div class="md:col-span-6">
             <div
-              class="flex justify-center items-center gap-2 bg-donatebg w-28 h-11 rounded-md"
+              class="flex justify-center items-center gap-2 bg-donatebg w-36 h-12 rounded-md"
             >
               <img src="./assets/coin.png" alt="" />
-              <p class="text-textColor1">2400 BDT</p>
+              <p id="quota-total-collect" class="text-textColor1">2400 BDT</p>
             </div>
             <div class="space-y-6 mt-4">
               <h1 class="text-xl font-bold">
@@ -188,11 +195,12 @@
               <input
                 type="number"
                 name=""
-                id=""
+                id="quota-donate-input"
                 placeholder="Write Donation Amount"
                 class="w-full border rounded border-opacity-10 p-3"
               />
               <button
+                id="donate-quota-btn"
                 class="py-3 px-8 rounded-md bg-primary w-full text-xl font-bold"
               >
                 Donate Now
@@ -205,5 +213,8 @@
     <footer class="mt-10">
       <div class="bg-secondary h-20"></div>
     </footer>
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/donation.js"></script>
   </body>
 </html>
