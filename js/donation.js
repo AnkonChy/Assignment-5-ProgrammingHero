@@ -12,6 +12,17 @@ document
       document.getElementById(
         "noakhali-total-collect"
       ).innerText = `${newNoaTotal} BDT`;
+
+      //history
+      const historyItem = document.createElement("div");
+      historyItem.className = "p-8 rounded-md border-2 border-gray-500";
+      historyItem.innerHTML = `
+      <p class="text-xl font-bold text-gray-500">${newNoaDonation} Taka is Donated for flood at Noakhali, Bangladesh</p>
+      <p class="text-base font-light text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+      `;
+
+      const historyContainer = document.getElementById("history-container");
+      historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     } else {
       alert("Insufficient Balance");
     }
@@ -29,6 +40,17 @@ document
       document.getElementById(
         "feni-total-collect"
       ).innerText = `${newFeniTotal} BDT`;
+
+      //history
+      const historyItem = document.createElement("div");
+      historyItem.className = "p-8 rounded-md border-2 border-gray-500";
+      historyItem.innerHTML = `
+         <p class="text-xl font-bold text-gray-500">${newFeniDonation} Taka is Donated for flood Relief in Noakhali, Bangladesh</p>
+         <p class="text-base font-light text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+         `;
+
+      const historyContainer = document.getElementById("history-container");
+      historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     } else {
       alert("Insufficient Balance");
     }
@@ -46,7 +68,34 @@ document
       document.getElementById(
         "quota-total-collect"
       ).innerText = `${newQuotaTotal} BDT`;
+
+      //history
+      const historyItem = document.createElement("div");
+      historyItem.className = "p-8 rounded-md border-2 border-gray-500";
+      historyItem.innerHTML = `
+         <p class="text-xl font-bold text-gray-500">${newQuotaDonation} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+         <p class="text-base font-light text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+         `;
+
+      const historyContainer = document.getElementById("history-container");
+      historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     } else {
       alert("Insufficient Balance");
     }
   });
+
+//   history tab functionality
+const historyTab = document.getElementById("history-tab");
+const donationTab = document.getElementById("donation-tab");
+historyTab.addEventListener("click", function () {
+  historyTab.classList.add("bg-primary");
+  donationTab.classList.remove("bg-primary");
+  document.getElementById("donation-container").classList.add("hidden");
+});
+
+//donation tab functionality
+donationTab.addEventListener("click", function () {
+  donationTab.classList.add("bg-primary");
+  historyTab.classList.remove("bg-primary");
+  document.getElementById("donation-container").classList.remove("hidden");
+});
