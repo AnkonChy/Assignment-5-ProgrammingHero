@@ -220,23 +220,31 @@
             </div>
           </div>
         </div>
+
+        <!-- modal -->
         <div
           id="donate-success-modal"
           class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
         >
           <div
-            class="bg-yellow-50 py-10 px-12 rounded-lg flex flex-col justify-center items-center"
+            class="bg-white py-10 px-16 rounded-lg flex flex-col justify-center items-center"
           >
             <h1 class="text-3xl font-bold mb-3">Congrates!</h1>
-            <img src="./assets/coin.png" alt="" />
-            <p>You Have Donated for Humankind</p>
+            <img class="mb-2" src="./assets/coin.png" alt="" />
+            <p class="text-lg font-semibold">You Have Donated for Humankind</p>
             <h2 class="text-xl font-bold">Successfully</h2>
-            <button id="close-modal" class="bg-black text-white py-2 px-2 rounded-md font-bold mt-4">Close Confirmation</button>
+            <button
+              id="close-modal"
+              class="bg-gray-200 text-black py-2 px-2 rounded-md font-bold mt-4"
+            >
+              Close Confirmation
+            </button>
           </div>
         </div>
       </div>
 
-      <div id="history-container" class="hidden"></div>
+      <!-- history  -->
+      <div id="history-container" class="hidden w-10/12 mx-auto"></div>
     </main>
     <footer class="mt-10">
       <div class="bg-secondary h-20"></div>

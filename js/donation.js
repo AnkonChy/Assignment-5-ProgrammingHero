@@ -7,7 +7,7 @@ document
       "noakhali-total-collect"
     );
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance >= newNoaDonation) {
+    if (availableBalance >= newNoaDonation && newNoaDonation > 0) {
       const newNoaTotal = newNoaDonation + noakhaliCurrentTotal;
       const newAvailableBalance = availableBalance - newNoaDonation;
 
@@ -46,7 +46,7 @@ document
             .classList.add("hidden");
         });
     } else {
-      alert("Insufficient Balance");
+      alert("Failed to donate.Please try again");
     }
   });
 
@@ -57,7 +57,7 @@ document
     const newFeniDonation = getInputFieldValueById("feni-donate-input");
     const feniCurrentTotal = getTextFieldValueById("feni-total-collect");
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance >= newFeniDonation) {
+    if (availableBalance >= newFeniDonation && newFeniDonation > 0) {
       const newFeniTotal = newFeniDonation + feniCurrentTotal;
       const newAvailableBalance = availableBalance - newFeniDonation;
       document.getElementById(
@@ -96,7 +96,7 @@ document
             .classList.add("hidden");
         });
     } else {
-      alert("Insufficient Balance");
+      alert("Failed to donate.Please try again");
     }
   });
 
@@ -107,7 +107,7 @@ document
     const newQuotaDonation = getInputFieldValueById("quota-donate-input");
     const quotaCurrentTotal = getTextFieldValueById("quota-total-collect");
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance >= newQuotaDonation) {
+    if (availableBalance >= newQuotaDonation && newQuotaDonation > 0) {
       const newQuotaTotal = newQuotaDonation + quotaCurrentTotal;
       const newAvailableBalance = availableBalance - newQuotaDonation;
       document.getElementById(
@@ -146,7 +146,7 @@ document
             .classList.add("hidden");
         });
     } else {
-      alert("Insufficient Balance");
+      alert("Failed to donate.Please try again");
     }
   });
 
