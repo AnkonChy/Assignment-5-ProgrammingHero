@@ -72,7 +72,7 @@ document
       const historyItem = document.createElement("div");
       historyItem.className = "p-8 my-6  rounded-md border-2 border-gray-500";
       historyItem.innerHTML = `
-         <p class="text-xl font-bold text-gray-500">${newFeniDonation} Taka is Donated for flood Relief in Noakhali, Bangladesh</p>
+         <p class="text-xl font-bold text-gray-500">${newFeniDonation} Taka is Donated for flood Relief in Feni, Bangladesh</p>
          <p class="text-base font-light text-gray-500">Date: ${new Date().toString()}</p>
          `;
 
