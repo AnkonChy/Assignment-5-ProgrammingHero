@@ -7,11 +7,17 @@ document
       "noakhali-total-collect"
     );
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance > newNoaDonation) {
+    if (availableBalance >= newNoaDonation) {
       const newNoaTotal = newNoaDonation + noakhaliCurrentTotal;
+      const newAvailableBalance = availableBalance - newNoaDonation;
+
       document.getElementById(
         "noakhali-total-collect"
       ).innerText = `${newNoaTotal} BDT`;
+
+      document.getElementById(
+        "available-balance"
+      ).innerText = `${newAvailableBalance} BDT`;
 
       //history
       const historyItem = document.createElement("div");
@@ -25,6 +31,20 @@ document
       historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
       document.getElementById("noakhali-donate-input").value = "";
+
+      // add modal
+      document
+        .getElementById("donate-success-modal")
+        .classList.remove("hidden");
+
+      // remove modal
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", function () {
+          document
+            .getElementById("donate-success-modal")
+            .classList.add("hidden");
+        });
     } else {
       alert("Insufficient Balance");
     }
@@ -37,11 +57,16 @@ document
     const newFeniDonation = getInputFieldValueById("feni-donate-input");
     const feniCurrentTotal = getTextFieldValueById("feni-total-collect");
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance > newFeniDonation) {
+    if (availableBalance >= newFeniDonation) {
       const newFeniTotal = newFeniDonation + feniCurrentTotal;
+      const newAvailableBalance = availableBalance - newFeniDonation;
       document.getElementById(
         "feni-total-collect"
       ).innerText = `${newFeniTotal} BDT`;
+
+      document.getElementById(
+        "available-balance"
+      ).innerText = `${newAvailableBalance} BDT`;
 
       //history
       const historyItem = document.createElement("div");
@@ -56,6 +81,20 @@ document
 
       //   for clear field
       document.getElementById("feni-donate-input").value = "";
+
+      // add modal
+      document
+        .getElementById("donate-success-modal")
+        .classList.remove("hidden");
+
+      // remove modal
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", function () {
+          document
+            .getElementById("donate-success-modal")
+            .classList.add("hidden");
+        });
     } else {
       alert("Insufficient Balance");
     }
@@ -68,11 +107,16 @@ document
     const newQuotaDonation = getInputFieldValueById("quota-donate-input");
     const quotaCurrentTotal = getTextFieldValueById("quota-total-collect");
     const availableBalance = getTextFieldValueById("available-balance");
-    if (availableBalance > newQuotaDonation) {
+    if (availableBalance >= newQuotaDonation) {
       const newQuotaTotal = newQuotaDonation + quotaCurrentTotal;
+      const newAvailableBalance = availableBalance - newQuotaDonation;
       document.getElementById(
         "quota-total-collect"
       ).innerText = `${newQuotaTotal} BDT`;
+
+      document.getElementById(
+        "available-balance"
+      ).innerText = `${newAvailableBalance} BDT`;
 
       //history
       const historyItem = document.createElement("div");
@@ -87,6 +131,20 @@ document
 
       //   for clear field
       document.getElementById("quota-donate-input").value = "";
+
+      // add modal
+      document
+        .getElementById("donate-success-modal")
+        .classList.remove("hidden");
+
+      // remove modal
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", function () {
+          document
+            .getElementById("donate-success-modal")
+            .classList.add("hidden");
+        });
     } else {
       alert("Insufficient Balance");
     }
