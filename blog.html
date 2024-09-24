@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- daisy Ui and tailwind css cdn configuration  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn configuration  -->
+    <script
+      src="https://kit.fontawesome.com/b78b1fa8d7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgb(180, 244, 97)",
+              secondary: "rgb(249, 247, 243)",
+              donatebg: "rgba(17, 17, 17, 0.05)",
+              textColor1: "rgba(17, 17, 17, 0.7);",
+            },
+            fontFamily: {
+              Inter: "Inter",
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="sticky top-0 backdrop-blur-md">
+      <nav class="bg-secondary backdrop-blur-md bg-opacity-80">
+        <div
+          class="flex justify-around md:justify-between items-center md:w-10/12 mx-auto pt-4 md:pt-6 pb-8 md:pb-12"
+        >
+          <div class="">
+            <a href="./index.html">
+              <button
+                class="bg-primary text-base md:text-lg lg:text-xl font-bold py-2 md:py-3 px-6 md:px-8 rounded-md"
+              >
+                Home
+              </button>
+            </a>
+          </div>
+          <div
+            class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-2 md:gap-4"
+          >
+            <img src="./assets/logo.png" alt="" />
+            <h2 class="text-base md:text-xl font-bold">Donate Bangladesh</h2>
+          </div>
+          <div class="flex items-center gap-2 md:gap-4">
+            <img src="./assets/coin.png" alt="" />
+            <h2
+              id="available-balance"
+              class="text-base md:text-lg lg:text-xl text-textColor1"
+            >
+              5500 BDT
+            </h2>
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex justify-center items-center gap-3 mt-12">
+        <button
+          id="donation-tab"
+          class="py-4 px-8 text-xl font-semibold rounded-md bg-primary hover:border-2 border-black"
+        >
+          Donation
+        </button>
+        <button
+          id="history-tab"
+          class="py-4 px-8 text-xl rounded-md font-semibold hover:border-2 border-black"
+        >
+          History
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="w-10/12 mx-auto">
+        <div class="flex items-center gap-2 my-8 ml-4">
+          <h1 class="text-3xl font-bold">Important FAQ</h1>
+          <i class="fa-regular fa-circle-question"></i>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a blueprint that allows
+              developers to access and modify the elements of a web page.
+              JavaScript makes a webpage interactive by manipulating the DOM
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              For single element: document.getElementById() and
+              document.querySelector() <br />
+              For multiple element: document.getElementByClass()
+              ,document.getElementByTagName(),document.querySelectorAll()
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why it is
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation allows a parent element to handle events from its
+              child elements, improving efficiency in the DOM.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              I can manipulate an element's using setAttribute() ,
+              getAttribute() , removeAttribute() , and can styles add .className
+              and classList[add(),remove()]
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
